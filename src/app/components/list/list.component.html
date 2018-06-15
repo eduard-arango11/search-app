@@ -9,12 +9,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor="let movie of dataResult.results" [routerLink]="['/detail', movie.id]">
+          <td>{{ movie.title }}</td>
           <td>---</td>
-          <td>---</td>
-          <td>---</td>
+          <td>{{ movie.release_date }}</td>
           <td>---</td>
       </tr>
     </tbody>
   </table>
 </div>
+<pre>{{ dataResult | json }}</pre>

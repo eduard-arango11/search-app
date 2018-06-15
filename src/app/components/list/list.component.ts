@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ResponseDescriptor } from '../../types/search.type';
 
 @Component({
   selector: 'app-list',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+
+  @Input() public dataResult:ResponseDescriptor;
 
   constructor() { }
 

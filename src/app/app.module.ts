@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 // Material & flex imports
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
 
 // Our components imports
 import { AppRoutingModule } from './app-routing.module';
@@ -34,7 +35,8 @@ import { StatsComponent } from './components/stats/stats.component';
     FormsModule,
     HttpClientModule,
     FlexLayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],
