@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ResponseDescriptor } from '../../types/search.type';
+import { GenresDescriptor } from '../../types/genres.type';
+import { GenresService } from '../../services/genres.service';
 
 @Component({
   selector: 'app-page-lists',
@@ -9,10 +11,19 @@ import { ResponseDescriptor } from '../../types/search.type';
 export class PageListsComponent implements OnInit {
 
   private moviesResult: ResponseDescriptor = new ResponseDescriptor();
+  public allGenres: GenresDescriptor = new GenresDescriptor();
 
-  constructor() { }
+  constructor(
+    private genresService: GenresService
+  ) { }
 
   ngOnInit() {
+    this.genresService.getAll().subscribe(
+      (data) => {
+        console.log(data);
+        this.allGenres = data;
+      }
+    );
   }
 
   ListenChild(event){
