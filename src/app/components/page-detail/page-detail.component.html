@@ -1,8 +1,12 @@
 <mat-card class="movie-detail-card">
   <mat-card-header>
-    <mat-card-title> Titulo </mat-card-title>
-    <mat-card-subtitle> Genero1, Genero2</mat-card-subtitle>
-    <app-stats></app-stats>
+    <mat-card-title> {{movie.title}} </mat-card-title>
+    <mat-card-subtitle>
+      <mat-chip *ngFor="let genre of movie.genres" color="primary" selected="true">
+        {{genre.name}}
+      </mat-chip> 
+    </mat-card-subtitle>
+    <!--app-stats></app-stats-->
   </mat-card-header>
   <mat-card-content>
     <p>
@@ -12,3 +16,4 @@
     </p>
   </mat-card-content>
 </mat-card>
+<pre>{{movie | json }}</pre>

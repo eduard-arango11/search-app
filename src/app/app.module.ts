@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
+import {MatChipsModule} from '@angular/material/chips';
 
 // Our components imports
 import { AppRoutingModule } from './app-routing.module';
@@ -38,7 +39,8 @@ import { GenresComponent } from './components/genres/genres.component';
     HttpClientModule,
     FlexLayoutModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let movie of dataResult.results" [routerLink]="['/detail', movie.id]">
+      <tr *ngFor="let movie of dataResult.results" [routerLink]="['movie/detail', movie.id]">
           <td>
             <h2> {{ movie.title }} </h2>
             <p> {{ (movie.overview.length > 100) ? (movie.overview | slice:0:100) + '....' : (movie.overview) }} </p>
