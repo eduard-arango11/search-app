@@ -1,4 +1,17 @@
-.stats-card {
-    border: 1px blue solid;
-    max-width: 100px;
+.app-stats {
+    .mat-list-item{
+        margin-bottom: -20px;
+    }
+    .low {
+        color: lightgray;
+    }
+    .normal {
+        color: blue;
+    }
+    .high {
+        color: rgb(241, 31, 24);
+    }
+    .invisible {
+        display: none;
+    }
 }

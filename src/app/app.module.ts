@@ -10,6 +10,10 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { MatIconModule } from "@angular/material/icon";
 
 // Our components imports
 import { AppRoutingModule } from './app-routing.module';
@@ -40,7 +44,11 @@ import { GenresComponent } from './components/genres/genres.component';
     FlexLayoutModule,
     MatButtonModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTabsModule,
+    MatListModule,
+    MatGridListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],

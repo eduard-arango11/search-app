@@ -8,7 +8,7 @@ import { ResponseDescriptor } from '../../types/search.type';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  public term: string = 'amelie';
+  public term: string;
   public movies: any[];
 
   @Output() moviesFinded: EventEmitter<ResponseDescriptor> = new EventEmitter();

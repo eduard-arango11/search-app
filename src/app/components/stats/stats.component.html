@@ -1,5 +1,23 @@
-<div>
-  <p> <b>Popularity:</b> {{movieStatsData.popularity}}</p>
-  <p> <b>Ranking:</b> {{movieStatsData.vote_average}}</p>
-  <p> <b>Total votes:</b> {{movieStatsData.vote_count}}</p>  
-</div>
+<!--div>
+  <p> Popularity: {{movieStatsData.popularity}}</p>
+  <p> Ranking: {{movieStatsData.vote_average}}</p>
+  <p> Total votes: {{movieStatsData.vote_count}}</p>  
+</div-->
+
+<mat-list role="list" class="app-stats">
+  <mat-list-item role="listitem" [ngClass]="{'high': movieStatsData.popularity >= 12, 'normal': movieStatsData.popularity < 12 && movieStatsData.popularity >= 5, 'low': movieStatsData.popularity < 5, 'invisible': movieStatsData.popularity === 0}">Popularity: {{ movieStatsData.popularity | number:'1.1-2' }}</mat-list-item>
+  <mat-list-item role="listitem" [ngClass]="{'invisible': movieStatsData.vote_average === 0 }">Ranking: {{ movieStatsData.vote_average }}</mat-list-item>
+  <mat-list-item role="listitem" *ngIf="movieStatsData.vote_count !== 0">Votes: {{ movieStatsData.vote_count }}</mat-list-item>
+</mat-list>
+
+<!--ul>
+  <li>Popularity: <span [ngClass]="{'high': movieStatsData.popularity >= 12, 'normal': movieStatsData.popularity < 12 && movieStatsData.popularity >= 5, 'low': movieStatsData.popularity < 5}">{{ movieStatsData.popularity | number:'1.1-2' }}</span></li>
+  <li [ngClass]="{'invisible': movieStatsData.vote_average === 0 }">Vote average: {{ movieStatsData.vote_average }}</li>
+  <li *ngIf="movieStatsData.vote_count !== 0">Votes: {{ movieStatsData.vote_count }}</li>
+</ul-->
+
+<!--div class="app-stats">
+  <div>Popularity: <span [ngClass]="{'high': movieStatsData.popularity >= 12, 'normal': movieStatsData.popularity < 12 && movieStatsData.popularity >= 5, 'low': movieStatsData.popularity < 5}">{{ movieStatsData.popularity | number:'1.1-2' }}</span></div>
+  <div [ngClass]="{'invisible': movieStatsData.vote_average === 0 }">Vote average: {{ movieStatsData.vote_average }}</div>
+  <div *ngIf="movieStatsData.vote_count !== 0">Votes: {{ movieStatsData.vote_count }}</div>
+</div-->
